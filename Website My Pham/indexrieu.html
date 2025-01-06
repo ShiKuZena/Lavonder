@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Lavonder</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script src="./web/js/jquery-3.7.1.min.js"></script>
+        <link rel="icon" 
+        type="image/png" 
+        href="./MAIN/logo.png">
+        <link rel="stylesheet" href="./css/indexs.css">
+    </head>
+
+    <body>
+      <!-------------------------------------------------------------Register && Login ------------------->
+      <div class="up">
+        <img src="./up.png" width="30px" alt="" loading="lazy" loading="lazy">
+      </div>
+
+      <div class="regis_successtick">
+        <img src="" alt="" loading="lazy" loading="lazy">
+        <p>Sign Up Successful</p>
+      </div>
+      <div class="successtick">
+        <img src="" alt="" loading="lazy" loading="lazy">
+        <p>Login Successful</p>
+      </div>
+      <div class="modal fade modaldn" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5>Đăng Nhập</h5>
+              <p>Vui lòng nhập số điện thoại hoặc email & mật khẩu</p>
+
+              <div class="inputit">
+                <input class="my-1" type="text" name="" id="sdtemaildn" size="41px" placeholder="Số điện thoại / email">
+                <p id="error1">Vui lòng nhập SĐT & Email vào.</p>
+                <input class="my-1" type="password" name="" id="mkdn" size="100px" placeholder="Mật khẩu">                
+                <p id="error2">Vui lòng nhập mật khẩu vào</p>
+              </div>
+              
+              <div class="inputitt mt-2">
+                <input type="checkbox" name="" id=""> Lưu tài khoản
+
+                <a class="butin">Quên mật khẩu</a>
+              </div>
+
+              <div class="inputat">
+                <button class="button" id="checkitdn">ĐĂNG NHẬP</button>
+                <span>Bạn chưa có tài khoản ? <a class="butin" data-bs-toggle="modal" data-bs-target="#exampleModala">Đăng ký ngay</a></span> <br>
+                <button class="fblog">
+                  <img src="./pic/fbicon.png" width="50px" height="100%" alt="" loading="lazy" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG FACEBOOK</span>
+                </button>
+                <button class="gglog">
+                  <img src="./pic/ggicon.png" width="40px" height="100%" alt="" loading="lazy" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG GOOGLE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="modal fade modaldk" id="exampleModala" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5>Đăng ký tài khoản</h5>
+
+              <div class="inputit">
+                <input class="my-1" type="text" name="" id="log_name" size="41px" placeholder="Tên Đăng Nhập">
+                <p id="error_regis1">Vui lòng nhập không dưới 8 ký tự</p>
+                <p id="error_regis1_1">Vui lòng không để trống</p>
+                <input class="my-1" type="password" name="" id="pass" size="100px" placeholder="Nhập mật khẩu từ 6 - 20 ký tự">
+                <p id="error_regis2">Vui lòng nhập không dưới 8 ký tự</p>
+                <input class="my-1" type="password" name="" id="re_pass" size="100px" placeholder="Nhập lại mật khẩu xác nhận">
+                <p id="error_regis3">Vui lòng nhập đúng với mật khẩu đã nhập</p>
+                <input class="my-1" type="text" name="" id="sdtoremail" size="41px" placeholder="Nhập số điện thoại hoặc email">
+                <p id="error_regis4">Vui lòng không để trống</p>
+              </div>
+              
+              <div class="inputitt mt-2">
+                <input type="radio" name="gt" id=""> Không xác định
+
+                <div id="gtt">
+                  <input type="radio" name="gt" id="gtn"> Nam &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <input type="radio" name="gt" id="gtn2"> Nữ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                </div>
+                <div class="inputit">
+                  <p id="error_radio">Vui lòng chọn giới tính:</p>
+                </div>
+                <input type="checkbox" name="" id="xacnhan"> Tôi đã đọc và đồng ý với <span href="#" class="butin">điều khoản</span> và <span href="#" class="butin">Chính sách bảo mật chung </span>của LAVONDER
+              </div>
+
+              <div class="inputat">
+                <button class="button" id="checkitdk">ĐĂNG KÝ</button>
+                <span>Bạn đã có tài khoản ? <a class="butin" data-bs-toggle="modal" data-bs-target="#exampleModal">Đăng nhập ngay</a></span> <br>
+                <button class="fblog">
+                  <img src="./pic/fbicon.png" width="50px" height="100%" alt="" loading="lazy" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG FACEBOOK</span>
+                </button>
+                <button class="gglog">
+                  <img src="./pic/ggicon.png" width="40px" height="100%" alt="" loading="lazy" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG GOOGLE</span>
+                </button>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+      <!----------------------------------------------------------------------------------------------------------------->
+
+      <!-------------------------------------------------------------Top Adverstise ------------------->
+        <div class="ad">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a><img src="./MAIN/bannerfluid1.jpg" class="d-block w-100" height="100px" alt="..x."></a>
+              </div>
+              <div class="carousel-item">
+                <a><img src="./MAIN/bannerfluid2.jpg" class="d-block w-100" height="100px" alt=".x.."></a>
+              </div>
+              <div class="carousel-item">
+                <a><img src="./MAIN/bannerfluid3.jpg" class="d-block w-100" height="100px" alt=".x.."></a>
+              </div>
+            </div>
+            <button class="carousel-control-prev visually-hidden" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next visually-hidden" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      <!----------------------------------------------------------------------------------------------------------------->
+
+      <!-------------------------------------------------------------Navbar ------------------->
+        <div class="sticky-top">
+        <header>
+          
+            <nav class="nav nava justify-content-center">
+              <div class="row navrow">
+                
+                <div class="col-2 ms-auto navbrand-out">
+                  <a href="" class="nav-log-respon" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./MAIN/logonav/user.png" alt="" loading="lazy" loading="lazy"></a>
+                  <a class="nav-link navbrand"><img src="./MAIN/logo.png" loading="lazy" width="110px" alt="" loading="lazy" loading="lazy"></a>
+                  
+                </div>
+                
+
+                <div class="col-8 ms-auto">
+                  <form class="d-flex nav-link mx-5 form-respo">
+                    <input class="form-control align-self-center rounded-pill" type="text" placeholder="Tìm kiếm...">
+                    <a href="" class="inse align-self-center"><img src="./MAIN/logonav/kinhlup.png" width="20px" height="20px" alt="" loading="lazy" loading="lazy"></a>
+                  </form>
+                  <a class="nav-link menu-icon"><img src="./menuicon.png" width="100px" id="menu-spin" alt="" loading="lazy" loading="lazy"></a>
+                  <a href="cart.html" class="cart-respon"><img src="./MAIN/logonav/cart.png" alt="" loading="lazy" loading="lazy"></a>
+                </div>
+                
+              </div>
+              <div class="nav-responsive">
+                <a href="#here" class="nav-link-respon">Khuyến Mãi HOT T10</a>
+                <a href="./lamsachda.html" class="nav-link-respon">Làm Sạch Da</a>
+                <a href="./duongam.html" class="nav-link-respon">Cấp Ẩm & Phục Hồi</a>
+                <a href="./kemtrimun.html" class="nav-link-respon">Kem Trị Mụn & Serum</a>
+                <a href="./kemchongnang.html" class="nav-link-respon">Kem Chống Nắng</a>
+              </div>
+
+              <div class="my-2 nav-link navlogo">
+                <a href="" class="loggo" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./MAIN/logonav/user.png" alt="" loading="lazy" loading="lazy">: Đăng Nhập</a><span class="vert">|</span>
+                <a href="" class="loggo"><img src="./MAIN/logonav/phone.png" alt="" loading="lazy" loading="lazy">: SĐT +1700 8686</a><span class="vert">|</span>
+                <a href="cart.html" class="loggo"><img src="./MAIN/logonav/cart.png" alt="" loading="lazy" loading="lazy">: Giỏ Hàng</a>
+              </div>
+                
+                
+            </nav>
+            <nav class="nav navb justify-content-center">
+              <a href="#here" class="nav-link navbarwt mx-4">Khuyến Mãi HOT T10</a>
+              <a href="./lamsachda.html" class="nav-link navbarwt mx-4">Làm Sạch Da</a>
+              <a href="./duongam.html" class="nav-link navbarwt mx-4">Cấp Ẩm & Phục Hồi</a>
+              <a href="./kemtrimun.html" class="nav-link navbarwt mx-4">Kem Trị Mụn & Serum</a>
+              <a href="./kemchongnang.html" class="nav-link navbarwt mx-4">Kem Chống Nắng</a>
+            </nav>     
+        </header>
+      </div>
+      <!----------------------------------------------------------------------------------------------------------------->
+
+      <!------------------------------------------------------------------Main Body-------------------->
+        <main>
+          <!-----------------------------------------------------------Carousel Adverstise---------------------->
+            <div class="container responsive-container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="carouselExampleIndicators" class="carousel slide sizee">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner imgad">
+                              <div class="carousel-item active">
+                                <img src="./MAIN/banner.jpg" class="d-block w-100" width="720px" height="350px" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./MAIN/banner2.jpg" class="d-block w-100" width="720px" height="350px" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./MAIN/banner3.jpg" class="d-block w-100" width="720px" height="350px" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                    <div class="col-2 col-md-4">
+                        <div id="carouselExampleIndicatorsa" class="carousel slide sizeb">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicatorsa" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicatorsa" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicatorsa" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner imgads">
+                              <div class="carousel-item active">
+                                <img src="./MAIN/banner4.png" class="d-block w-100" width="370px" height="170px" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./MAIN/banner5.jpg" class="d-block w-100" width="370px" height="170px" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./MAIN/banner6.jpg" class="d-block w-100" width="370px" height="170px" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsa" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsa" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                          <div id="carouselExampleIndicatorsb" class="carousel slide sizeb">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicatorsb" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicatorsb" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicatorsb" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner imgads">
+                              <div class="carousel-item active">
+                                <img src="./MAIN/banner7.jpg" class="d-block w-100" width="370px" height="170px" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./MAIN/banner8.jpg" class="d-block w-100" width="370px" height="170px" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./MAIN/banner9.jpg" class="d-block w-100" width="370px" height="170px" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsb" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsb" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------Ticket Voucher------------------->
+            <div class="container my-5  ticket-repso">
+                <div class="row py-2">
+                  <div class="col-6">
+                    <div class="goi">
+                      <div class="card cardi">
+                        <div class="main">
+                          <div class="co-img mb-3">
+                            <img
+                              src="./MAIN/salebrand.jpg"
+                              alt="" loading="lazy" loading="lazy"
+                            />
+                          </div>
+                          <div class="vertical"></div>
+                          <div class="content">
+                            <h2>Perfume</h2>
+                            <h1>30% <span>Voucher</span></h1>
+                            <p>Hạn Sử Dụng 27/11/2024</p>
+                          </div>
+                        </div>
+                        <div class="copy-button">
+                          <input id="copyvalue" type="text" readonly value="PERFUMELOVANDER" />
+                          <button onclick="copyIt()" class="copybtna">COPY</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+
+                  <div class="col-6">
+                    <div class="goi">
+                      <div class="card cardi">
+                        <div class="main">
+                          <div class="co-img">
+                            <img
+                              src="./pic/make.png"
+                              alt="" loading="lazy" loading="lazy"
+                            />
+                          </div>
+                          <div class="vertical"></div>
+                          <div class="content">
+                            <h2>All Cosmetic</h2>
+                            <h1>10% <span>Voucher</span></h1>
+                            <p>Hạn Sử Dụng 14/12/2024</p>
+                          </div>
+                        </div>
+                        <div class="copy-button">
+                          <input id="copyvaluea" type="text" readonly value="DAYMAKEUP" />
+                          <button onclick="copyIta()" class="copybtn">COPY</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row py-2">
+                    <div class="col-6">
+                      <div class="goi">
+                        <div class="card cardi">
+                          <div class="main">
+                            <div class="co-img">
+                              <img
+                                src="./pic/perfume.png"
+                                alt="" loading="lazy" loading="lazy"
+                              />
+                            </div>
+                            <div class="vertical"></div>
+                            <div class="content">
+                              <h2>Perfume</h2>
+                              <h1>20% <span>Voucher</span></h1>
+                              <p>Hạn Sử Dụng 24/10/2024</p>
+                            </div>
+                          </div>
+                          <div class="copy-button">
+                            <input id="copyvalueb" type="text" readonly value="PERFUMELOVANDER" />
+                            <button onclick="copyItb()" class="copybtnb">COPY</button>
+                          </div>
+                          </div>
+                      </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="goi">
+                          <div class="card cardi">
+                            <div class="main">
+                              <div class="co-img">
+                                <img
+                                  src="./pic/perfume.png"
+                                  alt="" loading="lazy" loading="lazy"
+                                />
+                              </div>
+                              <div class="vertical"></div>
+                              <div class="content">
+                                <h2>Perfume</h2>
+                                <h1 id="here">20% <span>Voucher</span></h1>
+                                <p>Hạn Sử Dụng 31/9/2024</p>
+                              </div>
+                            </div>
+                            <div class="copy-button">
+                              <input id="copyvaluec" type="text" readonly value="PERFUMELOVANDER" />
+                              <button onclick="copyItc()" class="copybtnc">COPY</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                  </div>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------Hot Sale Box------------------->
+            <div class="container boxes py-2">
+                <div class="text">
+                    <div class="boxwrap">
+                        <h1>Hot Sale!</h1>
+                    <div class="box">
+                        <p class="days">00</p>
+                    </div>
+                    <div class="box">
+                        <p class="hours"></p>
+                    </div>
+                    <div class="box">
+                        <p class="minutes">:</p>
+                    </div>
+                    <div class="box">
+                        <p class="seconds"></p>
+                    </div>
+                    </div>
+                </div>
+                    
+                <div class="container py-2 responsive-box-product">
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp1/sp3.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      15%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp1/SỬA RỬA MẶT/cerava xanh lá/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Sữa Rửa Mặt <br> 
+                                        CeraVe Cho Da Thường Đến Khô Hydrating Cleanser
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">155.000<span class="dong">đ</span></span> <span class="price2">132.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp1/sp5a.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      10%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp1/SỬA RỬA MẶT/hadalabo xanh biển/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Sữa Rửa Mặt <br> 
+                                        Dưỡng Trắng Hada Labo Prefect White 80G
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">93.000<span class="dong">đ</span></span> <span class="price2">84.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp2/sp2a.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      25%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp2/KEM DƯỠNG/La Roche-Posay giảm mụn/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Kem Dưỡng Ẩm <br>
+                                        La Roche-Posay Giảm Mụn Hiệu Quả Effaclar Duo+ M
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">400.000<span class="dong">đ</span></span> <span class="price2">360.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp3/sp3.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      10%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp3/SERUM/Serum Timeless xanh biển/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Serum <br>
+                                        Timeless Vitamin C
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">670.000<span class="dong">đ</span></span> <span class="price2">603.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp4/sp7.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      10%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN Anessa/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Kem chống nắng <br>
+                                        Anessa Perfect UV Sunscreen Skincare Milk SPF 50+ PA++++
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">285.000<span class="dong">đ</span></span> <span class="price2">257.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp2/sp9.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      10%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp2/KEM DƯỠNG/Neutrogena/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Toner <br>
+                                        Neutrogena Cấp Nước Cho Da Dầu
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">110.000<span class="dong">đ</span></span> <span class="price2">99.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp3/sp1a.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      10%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp3/SERUM/Serum Garnier cam/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Serum <br>
+                                        Garnier 10% Vitamin C - Bright Complete Overnight
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">349.000<span class="dong">đ</span></span> <span class="price2">297.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp2/sp4.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      15%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp2/TONNER/OBAGI/bìa.png" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Toner <br>
+                                        Obagi Clenziderm MD Pore Therapy
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">906.000<span class="dong">đ</span></span> <span class="price2">770.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp3/sp8.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      10%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp3/SERUM/Serum oh!oh!/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Serum <br>
+                                        Oh!Oh! Dưỡng Sáng Da, Giảm Thâm Nám
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">980.000<span class="dong">đ</span></span> <span class="price2">882.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp4/sp1.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      20%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN Pestlo hồng/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Kem Chống Nắng <br>
+                                        Pestlo Saferecipe Niamin C Tone Up Sun SPF 50+ PA+++++
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">332.000<span class="dong">đ</span></span> <span class="price2">266.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp2/sp11.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      10%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp2/KEM DƯỠNG/Gel Dưỡng Ẩm Nature Republic Chiết Xuất Lô Hội/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Gel Dưỡng Ẩm <br>
+                                        Nature Republic Chiết Xuất Lô Hội
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">125.000<span class="dong">đ</span></span> <span class="price2">113.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span> <span class="voucher2">BEST</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-md-3">
+                                <a class="none" href="./tconcuatsp4/sp8a.html">
+                                  <div class="card imgho">
+                                    <div class="tagcon">
+                                      <div class="tagdis">
+                                      20%
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                                      <img src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN L'Oreal hồng/bìa.jpg" class="card-img-top" width="150" height="270px" alt="...">
+                                      <p class="cardtext py-2">
+                                        Kem Chống Nắng <br>
+                                        L'Oreal Mịn Nhẹ Nâng Tông Giảm Thâm UV Defender Bright & Clear SPF 50+ PA ++++
+                                      </p>
+                                      <div class="pt-1 price">
+                                        <span class="price1">379.000<span class="dong">đ</span></span> <span class="price2">303.000<span class="dong">đ</span></span>
+                                      </div>
+                                      <div class="py-2 tag">
+                                        <span class="voucher1">FREESHIP</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev leftse" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next rightse" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------All Brand------------------->
+            <div class="container bgsale my-4 py-2">
+                <table>
+                  <tr>
+                    <th colspan="3" rowspan="2" class="py-4">
+                      <div class="brandof container">
+                        <h1>
+                          THƯƠNG HIỆU <br> NỔI BẬT
+                        </h1>
+                        <p>
+                          Tuyển tập những thương hiệu mỹ phẩm uy tín nhất tại Lavonder
+                        </p>
+                      </div>
+                    </th>
+                    <td>
+                      <img class="imgho" src="./MAIN/logo1.png" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+
+                    <td>
+                      <img class="imgho" src="./MAIN/logo2.jpg" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+
+                    <td>
+                      <img class="imgho" src="./MAIN/logo3.png" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+
+                    <td>
+                      <img class="imgho" src="./MAIN/logo4.jpg" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <img class="imgho" src="./MAIN/logo5.png" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+
+                    <td>
+                      <img class="imgho" src="./MAIN/logo6.png" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+
+                    <td>
+                      <img class="imgho" src="./MAIN/logo7.jpg" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+
+                    <td>
+                      <img class="imgho" src="./MAIN/logo8.webp" width="180px" height="120px" alt="" loading="lazy" loading="lazy">
+                    </td>
+                  </tr>
+                </table>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------Làm Sạch Da------------------->
+            <div class="container bgboard my-4">
+              <table>
+                <tr>
+                  <td class="centeris">
+                    <h2>Làm Sạch Da</h2>
+                  </td>
+
+                  <td colspan="3" class="align-self-center">
+                    <nav class="navrieu">
+                      <a href="">TẤT CẢ</a>
+                      <a href="">SỮA RỬA MẶT</a>
+                      <a href="">TẨY TRANG</a>
+                      <div class="animation start-home"></div>
+                    </nav>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="py-2">
+                    <img class="imgho" src="./MAIN/làm sạch da/big.jpg" width="400px" height="600px" alt="" loading="lazy" loading="lazy">
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp1/sp15a.html"><img class="imgho" src="./hinhtrangsp1/TẨY TRANG/bioderma pink/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp1/sp11.html"><img class="imgho" src="./hinhtrangsp1/TẨY TRANG/la roche dầu mụn/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp1/sp9d.html"><img class="imgho" src="./hinhtrangsp1/TẨY TRANG/loreal tím/1.png" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="./tconcuatsp1/sp7.html"><img class="imgho" src="./hinhtrangsp1/TẨY TRANG/garniner xanh nhạt/1.png" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp1/sp19.html"><img class="imgho" src="./hinhtrangsp1/SỬA RỬA MẶT/SVR/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp1/sp20.html"><img class="imgho" src="./hinhtrangsp1/SỬA RỬA MẶT/centaphil/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------Dưỡng Ẩm------------------->
+            <div class="container bgboard my-4">
+              <table>
+                <tr class="repsonsive-rever">
+                  <td colspan="3" class="align-self-center">
+                    <nav class="navrieu">
+                      <a href="">TẤT CẢ</a>
+                      <a href="">TONER</a>
+                      <a href="">KEM DƯỠNG ẨM</a>
+                      <div class="animation start-home"></div>
+                    </nav>
+                  </td>
+
+                  <td class="centeris isright">
+                    <h2>Dưỡng Ẩm</h2>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="./tconcuatsp2/sp9.html"><img class="imgho" src="./hinhtrangsp2/KEM DƯỠNG/Neutrogena/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp2/sp14c.html"><img class="imgho" src="./hinhtrangsp2/KEM DƯỠNG/Hada Labo Tối Ưu Cho Mọi Loại Da/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp2/sp1a.html"><img class="imgho" src="./hinhtrangsp2/KEM DƯỠNG/Eucerin Giúp Phục Hồi & Tái Tạo Da/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td rowspan="2" class="py-2">
+                    <img class="imgho" src="./MAIN/dưỡng ẩm/big.jpg" width="400px" height="600px" alt="" loading="lazy" loading="lazy">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="./tconcuatsp2/sp6.html"><img class="imgho" src="./hinhtrangsp2/KEM DƯỠNG/Bioderma Giúp Se Khít Lỗ Chân Lông/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp2/sp12a.html"><img class="imgho" src="./hinhtrangsp2/TONNER/Klairs tím/1.png" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp2/sp16.html"><img class="imgho" src="./hinhtrangsp2/TONNER/Cosrx/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------Kem Đặc Trị------------------->
+            <div class="container bgboard my-4">
+              <table>
+                <tr>
+                  <td class="centeris">
+                    <h2>Kem Đặc Trị</h2>
+                  </td>
+
+                  <td colspan="3" class="align-self-center">
+                    <nav class="navrieu">
+                      <a href="">TẤT CẢ</a>
+                      <a href="">KEM TRỊ MỤN</a>
+                      <a href="">SERUM</a>
+                      <div class="animation start-home"></div>
+                    </nav>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="py-2">
+                    <img class="imgho" src="./MAIN/Đặc trị/big.jpg" width="400px" height="600px" alt="" loading="lazy" loading="lazy">
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp3/sp10.html"><img class="imgho" src="./hinhtrangsp3/SERUM/Serum GoodnDoc/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp3/sp4.html"><img class="imgho" src="./hinhtrangsp3/TRỊ MỤN/Derma/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp3/sp20.html"><img class="imgho" src="./hinhtrangsp3/TRỊ MỤN/Neogen/1.png" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="./tconcuatsp3/sp14c.html"><img class="imgho" src="./hinhtrangsp3/SERUM/Serum Balance xanh biển/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp3/sp7.html"><img class="imgho" src="./hinhtrangsp3/TRỊ MỤN/Paula’s/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp3/sp3.html"><img class="imgho" src="./hinhtrangsp3/SERUM/Serum Timeless xanh biển/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------Kem Chống Nắng------------------->
+            <div class="container bgboard my-4">
+              <table>
+                <tr class="repsonsive-rever">
+                  <td colspan="3" class="align-self-center">
+                    <nav class="navrieu">
+                      <a href="">TẤT CẢ</a>
+                      <a href="">KCN VẬT LÝ</a>
+                      <a href="">KCN HÓA HỌC</a>
+                      <div class="animation start-home"></div>
+                    </nav>
+                  </td>
+
+                  <td class="centeris isright">
+                    <h2>Kem Chống Nắng</h2>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="./tconcuatsp4/sp1.html"><img class="imgho" src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN Pestlo hồng/1.png" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp4/sp3a.html"><img class="imgho" src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN beplain xanh biển/1.png" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp4/sp5.html"><img class="imgho" src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN Sunplay Skin Aqua/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td rowspan="2" class="py-2">
+                    <img class="imgho" src="./MAIN/kcn/big.jpg" width="400px" height="600px" alt="" loading="lazy" loading="lazy">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="./tconcuatsp4/sp4a.html"><img class="imgho" src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN sữa La Roche-Posay khô/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp4/sp3c.html"><img class="imgho" src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN beplain tím đậm/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+
+                  <td>
+                    <a href="./tconcuatsp4/sp8b.html"><img class="imgho" src="./hinhtrangsp4/KEM CHỐNG NẮNG/KCN L'Oreal đỏ/1.jpg" width="220px" height="290px" alt="" loading="lazy" loading="lazy"></a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------------Beautiful Tip------------------->
+            <div class="container my-4 bdown">
+              <h2 align="center" class="colorit">BEAUTY TIP</h2>
+              <div class="row my-2">
+                <div class="col">
+                  <a href="./blog.html#sangtoi"><img class="imgho ah1" src="./MAIN/cac-buoc-cham-soc-da-co-ban-1-1.jpg" alt="" loading="lazy" loading="lazy"></a>
+                  <a href="./blog.html"><img class="imgho ah2" src="./MAIN/tẩy tế bào chết.webp" alt="" loading="lazy" loading="lazy"></a>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col">
+                  <a href="./blog.html#loaida"><img class="imgho ah2" src="./MAIN/da.webp" alt="" loading="lazy" loading="lazy"></a>
+                  <a href="./blog.html"><img class="imgho ah1" src="./MAIN/noivedepbatdau.jpg" alt="" loading="lazy" loading="lazy"></a>
+                </div>
+              </div>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------->
+
+        </main>
+        <!----------------------------------------------------------------------------------------------------------------->
+
+        <!-------------------------------------------------------------Footer ------------------->
+        <footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h2 class="text-uppercase mb-4 font-weight-bold">
+                  Lavonder
+                </h2>
+                <p>
+                  Here you can use rows and columns to organize your footer
+                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                </p>
+              </div>
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-2 font-weight-bold">Liên Hệ:</h6>
+                <h5><ion-icon name="call"></ion-icon> 1800 7182 </h5>
+                <h5><ion-icon name="call"></ion-icon> 1800 7177</h5>
+                <h6 class="text-uppercase mb-2 font-weight-bold">Hỗ Trợ:</h6>
+                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-2 font-weight-bold">Địa Chỉ Shop</h6>
+                <p><ion-icon name="location"></ion-icon>109 Đường Nguyễn Thiện Thuật, P2, Q3, TP.Hồ Chí Minh </p>
+                <p><ion-icon name="location"></ion-icon>413 Đường Nguyễn Kiệm, P9, Phú Nhuận, TP.Hồ Chí Minh</p>
+                <p><ion-icon name="location"></ion-icon>128 Đường Trần Quang Khải, P. Tân Tịnh, Q1, TP.Hồ Chí Minh</p>
+                <p><ion-icon name="location"></ion-icon>194 Đường Bạch Đằng, P24, Bình Thạnh, TP.Hồ Chí Minh</p>
+              </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-2 font-weight-bold">Fanpage</h6>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/fb.png" alt="" loading="lazy" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/gmail.png" alt="" loading="lazy" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/insta.png" alt="" loading="lazy" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/x.png" alt="" loading="lazy" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/mess.png" alt="" loading="lazy" loading="lazy">
+                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+            >
+          © 2024 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/"
+            >Lavonder.com</a
+            >
+        </div>
+      </footer>
+      <!----------------------------------------------------------------------------------------->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="./js&jquery/time.js"></script>
+        <script src="./js&jquery/toggle.js"></script>
+        <script src="./js&jquery/login&regis.js"></script>
+        <script src="./js&jquery/scroll.js"></script>
+    </body>
+</html>

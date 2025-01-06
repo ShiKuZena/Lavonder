@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Lavonder</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script src="./web/js/jquery-3.7.1.min.js"></script>
+        <link rel="icon" 
+        type="image/png" 
+        href="./MAIN/logo.png">
+        <link rel="stylesheet" href="./css/indexs.css">
+    </head>
+
+    <body>
+      <div class="up">
+        <img src="./up.png" width="30px" alt="" loading="lazy">
+      </div>
+
+      <div class="regis_successtick">
+        <img src="" alt="" loading="lazy">
+        <p>Sign Up Successful</p>
+      </div>
+      <div class="successtick">
+        <img src="" alt="" loading="lazy">
+        <p>Login Successful</p>
+      </div>
+      <div class="modal fade modaldn" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5>Đăng Nhập</h5>
+              <p>Vui lòng nhập số điện thoại hoặc email & mật khẩu</p>
+
+              <div class="inputit">
+                <input class="my-1" type="text" name="" id="sdtemaildn" size="41px" placeholder="Số điện thoại / email">
+                <p id="error1">Vui lòng nhập SĐT & Email vào.</p>
+                <input class="my-1" type="password" name="" id="mkdn" size="100px" placeholder="Mật khẩu">                
+                <p id="error2">Vui lòng nhập mật khẩu vào</p>
+              </div>
+              
+              <div class="inputitt mt-2">
+                <input type="checkbox" name="" id=""> Lưu tài khoản
+
+                <a href="#" class="butin">Quên mật khẩu</a>
+              </div>
+
+              <div class="inputat">
+                <button class="button" id="checkitdn">ĐĂNG NHẬP</button>
+                <span>Bạn chưa có tài khoản ? <a href="#" class="butin" data-bs-toggle="modal" data-bs-target="#exampleModala">Đăng ký ngay</a></span> <br>
+                <button class="fblog">
+                  <img src="./pic/fbicon.png" width="50px" height="100%" alt="" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG FACEBOOK</span>
+                </button>
+                <button class="gglog">
+                  <img src="./pic/ggicon.png" width="40px" height="100%" alt="" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG GOOGLE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="modal fade modaldk" id="exampleModala" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5>Đăng ký tài khoản</h5>
+
+              <div class="inputit">
+                <input class="my-1" type="text" name="" id="log_name" size="41px" placeholder="Tên Đăng Nhập">
+                <p id="error_regis1">Vui lòng nhập không dưới 8 ký tự</p>
+                <p id="error_regis1_1">Vui lòng không để trống</p>
+                <input class="my-1" type="password" name="" id="pass" size="100px" placeholder="Nhập mật khẩu từ 6 - 20 ký tự">
+                <p id="error_regis2">Vui lòng nhập không dưới 8 ký tự</p>
+                <input class="my-1" type="password" name="" id="re_pass" size="100px" placeholder="Nhập lại mật khẩu xác nhận">
+                <p id="error_regis3">Vui lòng nhập đúng với mật khẩu đã nhập</p>
+                <input class="my-1" type="text" name="" id="sdtoremail" size="41px" placeholder="Nhập số điện thoại hoặc email">
+                <p id="error_regis4">Vui lòng không để trống</p>
+              </div>
+              
+              <div class="inputitt mt-2">
+                <input type="radio" name="gt" id=""> Không xác định
+
+                <div id="gtt">
+                  <input type="radio" name="gt" id="gtn"> Nam &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <input type="radio" name="gt" id="gtn2"> Nữ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                </div>
+                <div class="inputit">
+                  <p id="error_radio">Vui lòng chọn giới tính:</p>
+                </div>
+                <input type="checkbox" name="" id="xacnhan"> Tôi đã đọc và đồng ý với <span href="#" class="butin">điều khoản</span> và <span href="#" class="butin">Chính sách bảo mật chung </span>của LAVONDER
+              </div>
+
+              <div class="inputat">
+                <button class="button" id="checkitdk">ĐĂNG KÝ</button>
+                <span>Bạn đã có tài khoản ? <a href="#" class="butin" data-bs-toggle="modal" data-bs-target="#exampleModal">Đăng nhập ngay</a></span> <br>
+                <button class="fblog">
+                  <img src="./pic/fbicon.png" width="50px" height="100%" alt="" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG FACEBOOK</span>
+                </button>
+                <button class="gglog">
+                  <img src="./pic/ggicon.png" width="40px" height="100%" alt="" loading="lazy">
+                  <span>ĐĂNG NHẬP BẰNG GOOGLE</span>
+                </button>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      
+        <div class="ad">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="#"><img src="./MAIN/bannerfluid1.jpg" class="d-block w-100" width="100%" height="100px" alt="..x."></a>
+              </div>
+              <div class="carousel-item">
+                <a href=""><img src="./MAIN/bannerfluid2.jpg" class="d-block w-100" width="100%" height="100px" alt=".x.."></a>
+              </div>
+              <div class="carousel-item">
+                <a href=""><img src="./MAIN/bannerfluid3.jpg" class="d-block w-100" width="100%" height="100px" alt=".x.."></a>
+              </div>
+            </div>
+            <button class="carousel-control-prev visually-hidden" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next visually-hidden" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="sticky-top">
+        <header>
+          
+          <nav class="nav nava justify-content-center">
+            <div class="row navrow">
+              
+              <div class="col-2 ms-auto navbrand-out">
+                <a href="" class="nav-log-respon" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./MAIN/logonav/user.png" alt="" loading="lazy"></a>
+                <a class="nav-link navbrand"><img src="./MAIN/logo.png" loading="lazy" width="110px" alt="" loading="lazy"></a>
+                
+              </div>
+              
+
+              <div class="col-8 ms-auto">
+                <form class="d-flex nav-link mx-5 form-respo">
+                  <input class="form-control align-self-center rounded-pill" type="text" placeholder="Tìm kiếm...">
+                  <a href="" class="inse align-self-center"><img src="./MAIN/logonav/kinhlup.png" width="20px" height="20px" alt="" loading="lazy"></a>
+                </form>
+                <a class="nav-link menu-icon"><img src="./menuicon.png" width="100px" id="menu-spin" alt="" loading="lazy"></a>
+                <a href="cart.html" class="cart-respon"><img src="./MAIN/logonav/cart.png" alt="" loading="lazy"></a>
+              </div>
+              
+            </div>
+            <div class="nav-responsive">
+              <a href="./indexrieu.html#here" class="nav-link-respon">Khuyến Mãi HOT T10</a>
+              <a href="./lamsachda.html" class="nav-link-respon">Làm Sạch Da</a>
+              <a href="./duongam.html" class="nav-link-respon">Cấp Ẩm & Phục Hồi</a>
+              <a href="./kemtrimun.html" class="nav-link-respon">Kem Trị Mụn & Serum</a>
+              <a href="./kemchongnang.html" class="nav-link-respon">Kem Chống Nắng</a>
+            </div>
+
+            <div class="my-2 nav-link navlogo">
+              <a href="" class="loggo" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./MAIN/logonav/user.png" alt="" loading="lazy">: Đăng Nhập</a><span class="vert">|</span>
+              <a href="" class="loggo"><img src="./MAIN/logonav/phone.png" alt="" loading="lazy">: SĐT +1700 8686</a><span class="vert">|</span>
+              <a href="cart.html" class="loggo"><img src="./MAIN/logonav/cart.png" alt="" loading="lazy">: Giỏ Hàng</a>
+            </div>
+              
+              
+          </nav>
+            <nav class="nav navb justify-content-center">
+              <a href="./indexrieu.html#here" class="nav-link navbarwt mx-4">Khuyến Mãi HOT T10</a>
+              <a href="./lamsachda.html" class="nav-link navbarwt mx-4">Làm Sạch Da</a>
+              <a href="./duongam.html" class="nav-link navbarwt mx-4">Cấp Ẩm & Phục Hồi</a>
+              <a href="./kemtrimun.html" class="nav-link navbarwt mx-4">Kem Trị Mụn & Serum</a>
+              <a href="./kemchongnang.html" class="nav-link navbarwt mx-4">Kem Chống Nắng</a>
+            </nav>     
+        </header>
+      </div>
+        
+        <main>
+            <h2 class="center_title">LAVONDER</h2>
+            <p class="bellow_title"><span>Nơi vẻ đẹp bắt đầu</span></p>
+
+            <div class="info">
+              <p>Một làn da khỏe mạnh có ý nghĩa quan trọng trong việc điều chỉnh thân nhiệt, bảo vệ cơ thể khỏi nguy cơ nhiễm trùng. Mời bạn tìm hiểu thêm cách bảo vệ da; những tình trạng da phổ biến và cách chăm sóc chúng tại đây.</p>
+            </div>
+
+            <div class="picture_info">
+              <div class="row g-0">
+                <div class="col">
+                  <img src="./blog/3590324a89c932976bd8 (2).jpg" width="440px" height="350px" alt="" loading="lazy">
+                </div>
+                <div class="col white">
+                  <b>11 THÓI QUEN GIÚP DA BẠN RẠNG RỠ HƠN TỪNG NGÀY</b>
+                  <p>
+                    1.	Đừng lười uống nước <br>
+                    2. Tập thể dục căng da mặt <br>
+                    3. Nói không với đường <br>
+                    4. Ngủ trước nửa đêm  <br>
+                    5. Tránh nắng  <br>
+                    6. Tẩy da chết và dưỡng ẩm  <br>
+                    7. Ăn nhiều rau củ  <br>
+                    8. Xông hơi đều đặn <br>
+                    9. Nghiêm khắc với khói thuốc<br>
+                    10. Dùng mĩ phẩm khoáng chất <br>
+                    11. Không sờ tay lên mặt<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="phanloai" id="loaida">
+              <h5>CÁC LOẠI DA</h5>
+              <div>
+                <img src="./blog/3590324a89c932976bd8.jpg" alt="" loading="lazy">
+                <h4>Đặc điểm cụ thể của từng loại da</h4>
+                <div class="bluraway" id="sangtoi">
+                  <p><b>Da thường</b> <br>
+                    Da thường là loại da khỏe mạnh, cân bằng giữa độ dầu và độ ẩm, da không quá nhờn hoặc quá khô. Da thường có lỗ chân lông nhỏ, kết cấu da mịn, mềm, mượt, đều màu và hồng hào. Những người sở hữu làn da thường khi lão hóa sẽ có xu hướng khô. <br></p>
+                </div>
+                <div class="mt-3" id="hidedi">
+                  
+                  <b>Da khô</b> <br>
+                  Da khô là loại da ít dầu, thiếu nước và độ ẩm. Da khô thường có dấu hiệu khô mốc, cằn cỗi và tróc vảy. Tuyến bã nhờn trên da khô hoạt động kém, lớp màng mỏng ít đi và da bị mất cân bằng độ ẩm, gây khô ráp, nứt nẻ. <br>
+                  <b>Da dầu</b> <br>
+                  Đây là loại da chứa nhiều dầu, do quá trình tiết bã nhờn diễn ra liên tục trên da. Nguyên nhân của sự tiết dầu này là do mất cân bằng hoocmon, yếu tố di truyền hoặc sử dụng mỹ phẩm sai cách, tình trạng căng thẳng kéo dài. <br>
+                  Da dầu có lỗ chân lông to, bề mặt bóng loáng, da dày tái nhợt và có khả năng sản sinh mụn trứng cá, đặc biệt là mụn đầu đen và mụn đầu trắng. <br>
+                  <b>Da hỗn hợp</b> <br>
+                  Là loại da có sự khác biệt giữa hai vùng chữ T và U, cụ thể là vùng trán là da dầu và vùng da khô ở 2 má. Phần da dầu gây ra do sinh ra nhiều dầu còn phần da khô do thiếu nước, thiếu độ ẩm và lipid tương ứng. <br>
+                  <b>Da nhạy cảm</b> <br>
+                  Da nhạy cảm là loại da căng mỏng, dễ nhìn thấy các mạch máu dưới da, dễ bị nổi mẩn đỏ và mụn. Đây là loại da khó gây chịu nhất trong các loại da. Da nhạy cảm thường bị tác động bởi môi trường, thời tiết, mỹ phẩm, thuốc tây hoặc thực phẩm. <br>
+                  <i>Mong rằng những thông tin trên đây sẽ giúp ích cho các bạn. Trước khi muốn sở hữu cho mình một làn da đẹp, hãy học cách phân loại da để có thể nuôi dưỡng và bảo vệ làn da một cách tốt nhất nhé!</i>
+                  
+                </div>
+                <div class="phanloai-btn" id="showra">
+                  <button>Hiển thị thêm</button>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="quy_trinh" >
+              <h4>QUY TRÌNH SKINCARE</h4>
+              <div class="row g-2">
+                <div class="col"><img src="./blog/1685002686431-5-buoc-skincare-ban-ngay.jpeg" alt="" loading="lazy"></div>
+                <div class="col p1">
+                  <b>Bước 1: Làm sạch da bằng sữa rửa mặt</b> <br>
+                  Rửa mặt vào buổi sang là  rất cần thiết. Bởi lẽ, vào ban đêm khi ngủ, làn da của chúng ta vẫn liên tục tiết ra mồ hôi, bã nhờ vào ban đêm hấp thụ bụi từ chăn gối và môi trường bên ngoài. <br>
+                  <b>Bước 2: Dùng toner để se khít lỗ chân lông</b> <br>
+                  Toner là bước tiếp theo trong chu trình skincare ban ngày có tác dụng làm sạch, cấp ẩm và se khít lỗ chân lông. <br>
+                  <b>Bước 3: Skincare ban ngày với serum/ tinh chất chuyên sâu</b> <br>
+                  vào buổi sáng, bạn nên ưu tiên các loại serum có khả năng kiềm dầu cũng như hỗ trợ cấp ẩm cho lớp makeup lên da mịn màng và đều màu hơn <br>
+                  <b>Bước 4: Dưỡng ẩm là bước không thể thiếu</b> <br>
+                  Trong các bước skincare ban ngày, dưỡng ẩm là bước không thể thiếu và có ý nghĩa “sống còn” tới việc duy trì làn da căng sáng, khỏe mạnh.<br>
+                  <b>Bước 5: Sử dụng kem chống nắng để bảo vệ da</b> <br>
+                  Buổi sáng là thời điểm bạn chuẩn bị ra ngoài để đi học, đi làm nên việc làn da phải tiếp xúc trực tiếp với khói bụi, ô nhiễm, ánh nắng mặt trời là điều không tránh khỏi. <br>
+                </div>
+              </div>
+
+              <div class="row g-0">
+                <div class="col p2">
+                  <b>Bước 1: Tẩy trang</b> <br>
+                  Tẩy trang là bước không thể thiếu trong chu trình skincare ban đêm với khả năng loại bỏ bụi bẩn, bã nhờn, cặn dầu thừa trên da trong suốt một ngày dài hoạt động và làm việc. <br>
+                  <b>Bước 2: Dùng sữa rửa mặt </b> <br>
+                  Sữa rửa mặt là bước tiếp theo sau bước tẩy trang giúp làm sạch sâu làn da. Đây là bước tiền đề để chu trình skincare ban đêm phát huy hiệu quả tốt nhất trên làn da của bạn. <br>
+                  <b>Bước 3: Tẩy tế bào chết</b><br>
+                  Tẩy tế bào chết cho da mặt đều đặn là cách nhanh chóng và hiệu quả giúp làn da trắng sáng rạng rỡ, đẩy lùi các dấu hiệu lão hoá da <br>
+                  <b>Bước 4: Dùng toner</b><br>
+                  Theo trình tự skincare ban đêm, toner sẽ ở bước thứ 3 giúp làm sạch và loại bỏ triệt để bã nhờn, bụi bẩn còn sót lại sau bước tẩy trang và sữa rửa mặt. Đồng thời, toner hỗ trợ cân bằng độ pH cho da <br>
+                  <b>Bước 5: Đắp mặt nạ </b> <br>
+                  au khi đã thoa toner, đắp mặt nạ là cách giúp cung cấp độ ẩm, làm dịu da tức thì, đồng thời thư giãn làn da và giảm căng thẳng hiệu quả. Các loại mặt nạ phổ biến hiện nay có thể kể đến như mặt nạ giấy, mặt nạ rửa, mặt nạ ngủ và mặt nạ lột <br>
+                  <b>Bước 6: Thoa Serum </b> <br>
+                  Serum được xem là tinh chất chuyên sâu có khả năng giải quyết từng vấn đề cụ thể là làn da đang gặp phải <br>
+                  <b>Bước 7: Sản phẩm đặc trị</b> <br>
+                  sản phẩm này sẽ có chứa những thành phần chính khác nhau có chức năng năng điều trị, làm giảm hoặc cắt đứt vấn đề/ tình trạng mà làn da đang phải đối mặt.  <br>
+                  <b>Bước 8: Dùng kem dưỡng</b> <br>
+                  Dưỡng ẩm bước cuối cùng trong chu trình skincare ban đêm giúp cấp ẩm, nuôi dưỡng, bảo vệ da khỏi cá tác động bất lợi từ môi trường bên ngoài.
+
+                </div>
+                <div class="col"><img src="./blog/1685523047814-cac-buoc-skincare-ban-dem-chuan-spa.jpeg" alt="" loading="lazy"></div>
+              </div>
+            </div>
+
+            <div class="info_bottom">
+              <h5>KHÔNG NẶN MỤN CÓ TỰ HẾT KHÔNG? <br> NẾU KHÔNG NẶN MỤN THÌ SAO?</h5>
+              <p>
+                <b>&#8500; Mụn là gì? &#8500;</b> <br>
+                - Mụn là một bệnh lý về da mà nhiều người mắc phải, nhất là những ai bước vào giai đoạn tuổi dậy thì, mang thai, tiền mãn kinh và mãn kinh. Mụn gây ra những nốt sưng đỏ, chứa mủ, có thể bị đau và ngứa rát. Tình trạng này có thể xuất hiện ở nhiều vùng da khác nhau như mặt, cằm, cổ, lưng, bả vai, mông,..
+                Dưới đây là các loại mụn phổ biến, được phân loại dựa vào tình trạng và triệu chứng trên da: <br>
+                <b>• Mụn đầu đen</b>  : Đầu mụn hở, nhân mụn tiếp xúc với không khí và các tác nhân bên ngoài nên bị oxy hóa chuyển thành màu đen. <br>
+                <b>• Mụn đầu trắng</b>  : Đầu mụn kín, mụn kích thước nhỏ, có màu trắng hoặc trùng với màu da. <br>
+                <b>• Mụn ẩn</b>  : Mụn nằm sâu dưới da, khó phát hiện nếu nhìn bằng mắt thường, mọc thành từng cụm khiến bề mặt da sần sùi. <br>
+                <b>• Mụn mủ</b>  : Đầu mụn màu trắng đục hoặc ngả vàng, nhân mụn chứa mủ, vùng da quanh mụn ửng đỏ. <br>
+                <b>• Mụn bọc, mụn nang</b>  : Mụn sưng đỏ, kích thước lớn, có thể mềm hoặc cứng tuỳ vào những thành phần bên trong nhân mụn, gây đau nhức, khó chịu. <br> <br>
+                <b>&#8500; Nguyên nhân gây mụn &#8500;</b> <br>
+                - Mụn bắt nguồn từ nhiều nguyên nhân, có thể kể đến như: <br>
+                <b>• Rối loạn nội tiết</b>  : Mất cân bằng hormone ở giai đoạn dậy thì, mang thai, tiền mãn kinh và mãn kinh sẽ gây ra các loại mụn nội tiết như mụn đầu đen, mụn ẩn ở trán, mụn cám ở mũi, mụn bọc ở cằm,... <br>
+                <b>• Tắc nghẽn lỗ chân lông</b>  : Tuyến bã nhờn hoạt động mạnh mẽ kích thích dầu thừa tiết ra nhiều làm tắc nghẽn lỗ chân lông và gây mụn. <br>
+                <b>• Sự xâm nhập của vi khuẩn P. Acnes</b>  : Môi trường sống không sạch sẽ, vệ sinh chăn ga gối đệm, khăn tắm không kỹ và thói quen sờ tay lên mặt thường xuyên là những điều kiện thuận lợi để vi khuẩn P. Acnes xâm nhập da, gây ra mụn trứng cá. <br>
+                <b>• Sử dụng mỹ phẩm không phù hợp</b>  : Sử dụng mỹ phẩm kém chất lượng, không phù hợp hoặc chứa thành phần độc hại sẽ gây kích ứng da. Khi hàng rào bảo vệ da bị tổn thương, da trở nên nhạy cảm hơn, dễ bị tác nhân bên ngoài tấn công và hình thành mụn. <br>
+                </p>
+              <h5>Không nặn mụn có tự hết không?</h5>
+              <p>
+                <b>•</b>  Mụn có thể tự hết mà không cần nặn: Các loại mụn không viêm, có nhân mụn nhỏ như mụn cám, không cần nặn mụn đầu đen,... thường có khả năng tự biến mất mà không cần nặn mụn. Tuy nhiên, quá trình tự lành của mụn cần rất nhiều thời gian, do đó bạn nên thoa kem trị mụn để giúp mụn nhanh hết. <br>
+                <b>•</b>  Mụn không thể tự hết, cần can thiệp xử lý: Mụn viêm sưng, có nhân mụn to và sâu như mụn mủ, mụn bọc thì không thể tự hết mà cần phải được xử lý đúng cách. <br>
+                <b>Những loại mụn nên nặn (Bạn chỉ có thể nặn mụn với những loại mụn kích thước nhỏ, không viêm sưng, không đau hoặc mụn đã chín có nhân trồi lên trên bề mặt da)</b> <br>
+                <b>•</b>  Mụn cám. <br>
+                <b>•</b>  Mụn đầu đen. <br>
+                <b>•</b>  Mụn đầu trắng <br>
+                <b>Những loại mụn không nên nặn (Những loại mụn có kích thước to, đau nhức thì không nên nặn. )</b> <br>
+                <b>•</b>  Mụn bọc. <br>
+                <b>•</b>  Mụn mủ. <br>
+                <b>•</b>  Mụn viêm. <br>
+                <b>•</b>  Mụn nang <br>
+                </p>
+              <h5>Cách nặn mụn an toàn, đúng cách</h5>
+              <p>
+              <b>• Bước 1 - Vệ sinh da mặt</b>  : Trước khi nặn mụn, bạn nên kết hợp nước tẩy trang và sữa rửa mặt phù hợp để làm sạch hoàn toàn lớp trang điểm, bụi bẩn, dầu nhờn dư thừa trên bề mặt da. <br>
+              <b>• Bước 2 - Tẩy tế bào chết</b>  : Tẩy tế bào chết nên thực hiện định kỳ, từ 1 - 2 lần/tuần. Bước này giúp loại bỏ tế bào sừng và tạp chất mắc kẹt bên trong lỗ chân lông, kích thích tái tạo tế bào da mới, giúp da sạch thoáng và sáng mịn hơn. <br>
+              <b>• Bước 3 - Xông hơi da mặt</b>  : Xông hơi từ 5 - 10 phút giúp làm mềm da, kích thích lỗ chân lông giãn nở giúp loại bỏ tế bào chết, bã nhờn, bụi bẩn một cách nhanh nhất. Hơn nữa, bước này còn giúp quá trình lấy nhân mụn dễ dàng hơn, hạn chế làm tổn thương da. <br>
+              <b>• Bước 4 - Lấy nhân mụn</b>  : Khử trùng dụng cụ lấy nhân mụn và vệ sinh tay sạch sẽ. Sau đó, bạn dùng dụng cụ nặn mụn để loại bỏ những nốt mụn, đồng thời dùng bông gòn để lau sạch máu và dịch chảy ra từ mụn. Để tránh tổn thương, bạn không nên nặn nốt mụn quá 3 lần. Bạn cũng lưu ý chỉ nặn nốt mụn đã chín, nhân mụn trồi lên, không nặn mụn đang bị viêm đỏ. <br>
+              <b>• Bước 5 - Đắp mặt nạ dưỡng da</b>  : Sau khi nhân mụn đã được loại bỏ, bạn có thể đắp mặt nạ cho da mụn chứa lô hội, trà xanh,... để làm dịu những nốt sưng đỏ. Đắp mặt nạ nên được thực hiện 2 - 3 lần/tuần để da phục hồi và trở nên mịn màng hơn. <br>
+              </p>
+              <h5>Cách điều trị mụn hiệu quả mà không cần nặn mụn</h5>
+              <p>
+                <b>&#8500; Cách trị mụn tại nhà &#8500;</b> <br>
+                <b>• Giữ da mặt luôn sạch sẽ</b>  : Bạn cần tẩy trang hằng ngày kể cả không trang điểm kết hợp rửa mặt bằng sữa rửa mặt đều đặn 2 lần ngày. Bên cạnh đó, bạn cần tẩy tế bào chết từ 1 - 2 lần/tuần để làm sạch tế bào sừng, dầu thừa, bụi bẩn, giúp bề mặt da luôn thông thoáng. <br>
+                <b>• Chườm đá lạnh lên vùng da mụn</b>  : Đá lạnh giúp giảm đau, giảm sưng, khô nhân mụn nhanh chóng. <br>
+                <b>• Sử dụng sản phẩm chăm sóc da phù hợp</b>  : Ưu tiên những sản phẩm skincare có nhãn oil free (không chứa dầu), non-acnegenic (không gây mụn trứng cá), non-comedogenic (không sinh nhân mụn), won’t clog pores (không làm tắc lỗ chân lông),... để mụn không tiến triển nặng, không xuất hiện mụn mới. <br>
+                <b>• Sử dụng kem đặc trị mụn</b>  : Bạn cần kết hợp một số loại kem đặc trị mụn có chứa các thành phần như Retinoids, Salicylic Acid, Benzoyl Peroxide,... để loại bỏ bã nhờn, tế bào chết, tiêu diệt vi khuẩn gây mụn và ngăn ngừa viêm nhiễm. <br>
+                <b>• Chế độ ăn uống lành mạnh</b>  : Bạn nên bổ sung vào chế độ ăn hằng ngày nhiều rau xanh, hoa quả, uống nhiều nước để tăng sức đề kháng cho làn da. Bên cạnh đó, nên hạn chế ăn đồ cay nóng, dầu mỡ, đồ ăn chứa nhiều đường, đồ uống chứa cồn và các chất kích thích khác. <br>
+                <b>• Chế độ sinh hoạt khoa học</b>  : Hạn chế thức khuya, không làm việc quá sức, kiểm soát căng thẳng, tập luyện thể dục mỗi ngày,... <br>
+              </p>
+              <br>
+            </div>
+        </main>
+        <footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h2 class="text-uppercase mb-4 font-weight-bold">
+                  Lavonder
+                </h2>
+                <p>
+                  Here you can use rows and columns to organize your footer
+                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                </p>
+              </div>
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 fottext">
+                <h6 class="text-uppercase mb-2 font-weight-bold">Liên Hệ:</h6>
+                <h5><ion-icon name="call"></ion-icon> 1800 7182 </h5>
+                <h5><ion-icon name="call"></ion-icon> 1800 7177</h5>
+                <h6 class="text-uppercase mb-2 font-weight-bold">Hỗ Trợ:</h6>
+                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-2 font-weight-bold">Địa Chỉ Shop</h6>
+                <p><ion-icon name="location"></ion-icon>109 Đường Nguyễn Thiện Thuật, P2, Q3, TP.Hồ Chí Minh </p>
+                <p><ion-icon name="location"></ion-icon>413 Đường Nguyễn Kiệm, P9, Phú Nhuận, TP.Hồ Chí Minh</p>
+                <p><ion-icon name="location"></ion-icon>128 Đường Trần Quang Khải, P. Tân Tịnh, Q1, TP.Hồ Chí Minh</p>
+                <p><ion-icon name="location"></ion-icon>194 Đường Bạch Đằng, P24, Bình Thạnh, TP.Hồ Chí Minh</p>
+              </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-2 font-weight-bold">Fanpage</h6>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/fb.png" alt="" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/gmail.png" alt="" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/insta.png" alt="" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/x.png" alt="" loading="lazy">
+                </span>
+
+                <span class="float m-1" href="#">
+                  <img src="./MAIN/logofooter/mess.png" alt="" loading="lazy">
+                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+            >
+          © 2024 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/"
+            >Lavonder.com</a
+            >
+        </div>
+      </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="./js&jquery/login&regis.js"></script>
+        <script src="./js&jquery/scroll.js"></script>
+        <script src="./js&jquery/toggle.js"></script>
+        <script src="./js&jquery/toggle2.js"></script>
+    </body>
+</html>
